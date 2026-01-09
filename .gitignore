@@ -1,0 +1,84 @@
+# Docker
+.env
+docker-compose.override.yml
+.dockerignore
+
+# Visual Studio
+.vs/
+.vscode/
+.idea/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.vcxproj.user
+*.vcxproj.filters
+TestResults/
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+*.opensdf
+*.sdf
+_UpgradeReport_Files/
+Backup*/
+UpgradeLog*.XML
+UpgradeLog*.htm
+*.Backup.*
+*.backup
+_ReSharper*/
+[Tt]emp/
+*.nupkg
+*.ncrunchsolution
+*.ncrunchproject
+_NCrunch_*
+.[Rr]e[Ss]harper
+*.sln.ide
+
+# .NET Core
+bin/
+obj/
+[Dd]ebug/
+[Rr]elease/
+[Tt]est[Rr]esults/
+[Bb]uild[Ll]og.*
+[Nn]u[Gg]et/
+packages/
+project.lock.json
+project.assets.json
+*.nuget.props
+*.nuget.targets
+*.csproj.nuget.*
+.vs/
+global.json
+launchSettings.json
+
+# EF Core
+Devices.Data/Migrations/*.Designer.cs
+Devices.Data/Migrations/*.sql
+
+# Logs
+logs/
+*.log
+*.trx
+
+# Local development
+appsettings.Local.json
+appsettings.Development.json
+appsettings.*.json
+secrets.json
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Visual Studio 2022
+**/Connected Services/*
+**/Service References/*
+*.vsdg
+*.vdproj
+*.vdx
+*.model.json
