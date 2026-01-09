@@ -36,12 +36,10 @@ if (app.Environment.IsDevelopment())
     // Verificar se o banco existe e aplicar migrations
     if (!dbContext.Database.CanConnect())
     {
-        Console.WriteLine("⚠️ Banco de dados não existe. Criando...");
         dbContext.Database.EnsureCreated();
     }
     else
     {
-        Console.WriteLine("✅ Banco de dados conectado. Aplicando migrations...");
         dbContext.Database.Migrate();
     }
 }

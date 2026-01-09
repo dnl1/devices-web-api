@@ -33,7 +33,15 @@ namespace Devices.Data.Extensions
                 .HasDefaultValueSql("NOW()");
 
             device.Property(d => d.State)
+                .IsRequired()
+                .HasConversion<int>()
                 .HasColumnName("state");
+
+            device.HasIndex(d => d.Brand)
+                .HasDatabaseName("IX_devices_brand");
+
+            device.HasIndex(d => d.State)
+                .HasDatabaseName("IX_devices_state");
         }
     }
 }

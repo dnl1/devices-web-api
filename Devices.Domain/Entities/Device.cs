@@ -9,5 +9,15 @@ namespace Devices.Domain.Entities
         public string Brand { get; set; }
         public DeviceState State { get; set; }
         public DateTime CreatedAt { get; set; }
+
+        public bool CanBeUpdated()
+        {
+            return State != DeviceState.InUse;
+        }
+
+        public bool CanBeDeleted()
+        {
+            return State != DeviceState.InUse;
+        }
     }
 }
