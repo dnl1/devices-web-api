@@ -1,7 +1,7 @@
 ﻿using Devices.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 
-namespace Devices.Data.Extensions
+namespace Devices.Infrastructure.Extensions
 {
     internal static class ConfigurationExtensions
     {

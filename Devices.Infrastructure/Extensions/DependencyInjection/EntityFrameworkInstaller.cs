@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Devices.Data.Extensions.DependencyInjection
+namespace Devices.Infrastructure.Extensions.DependencyInjection
 {
     public static class EntityFrameworkInstaller
     {

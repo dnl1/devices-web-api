@@ -1,8 +1,8 @@
-﻿using Devices.Data.Extensions;
+﻿using Devices.Infrastructure.Extensions;
 using Devices.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 
-namespace Devices.Data
+namespace Devices.Infrastructure
 {
     public class ApplicationDbContext : DbContext
     {

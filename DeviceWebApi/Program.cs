@@ -1,5 +1,11 @@
-﻿using Devices.Data;
-using Devices.Data.Extensions.DependencyInjection;
+﻿using Devices.Application.Interfaces;
+using Devices.Application.Services;
+using Devices.Application.Validators;
+using Devices.Domain.Interfaces;
+using Devices.Infrastructure;
+using Devices.Infrastructure.Extensions.DependencyInjection;
+using Devices.Infrastructure.Repositories;
+using FluentValidation;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -16,6 +22,15 @@ builder.Services.AddOpenApi();
 
 string connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 builder.Services.AddEFDbContext(connectionString);
+
+//Validators
+builder.Services.AddValidatorsFromAssemblyContaining<CreateDeviceCommandValidator>();
+
+// Repositories
+builder.Services.AddScoped<IDeviceRepository, DeviceRepository>();
+
+// Application Services
+builder.Services.AddScoped<IDeviceService, DeviceService>();
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(options =>
