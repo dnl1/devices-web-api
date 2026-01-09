@@ -4,8 +4,6 @@ A simple RESTful API for managing devices, built with **.NET 9**, **PostgreSQL**
 
 This project is intended for **local development and testing purposes**.
 
----
-
 ## Requirements
 
 Make sure you have the following installed:
@@ -13,8 +11,6 @@ Make sure you have the following installed:
 - **.NET 9 SDK**
 - **Docker & Docker Compose**
 - **PostgreSQL**
-
----
 
 ## Getting Started
 
