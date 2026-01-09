@@ -64,6 +64,17 @@ public class Device
         return Result.Success();
     }
 
+    public Result Delete()
+    {
+
+        var result = CanBeDeleted();
+        if (result.IsFailure)
+            return result;
+
+        State = DeviceState.Inactive;
+        return Result.Success();
+    }
+
     public static Result ValidateStateTransition(DeviceState from, DeviceState to)
     {
         if (from == DeviceState.Inactive && to != DeviceState.Available)
